@@ -1,0 +1,28 @@
+{
+  "name": "typescript-cli-boilerplate",
+  "version": "1.0.0",
+  "description": "A boilerplate typescript CLI application (insert description here)",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.ts",
+    "build": "tsc -p .",
+    "refresh": "rm -rf ./node_modules ./package-lock.json && npm install"
+  },
+  "author": "Nikita A. Wootten (changeme)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^14.0.13",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5"
+  },
+  "dependencies": {
+    "commander": "^5.1.0"
+  },
+  "nodemonConfig": {
+    "watch": "src/**/*.ts",
+    "execMap": {
+      "ts": "ts-node"
+    }
+  }
+}
